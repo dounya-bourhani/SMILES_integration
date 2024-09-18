@@ -18,7 +18,7 @@ Pour répondre à notre problématique, j'ai repris le travail initié par un an
 
 Afin de ré-entraîner le modèle, il faut relancer le Trainer dans [*sae_trainer.py*](./sae_trainer.py).
 
-A ce jour, j'ai réalisé 2 nouveaux entraînements dans un contexte de classification multi-label. Ces derniers sont contenus dans *modeles/*. Le premier modèle est fine-tuné sur des données brutes (non transformées), et le deuxième modèle sur les données smilisées. 
+A ce jour, j'ai réalisé deux nouveaux entraînements dans un contexte de classification multi-label. Le premier modèle est fine-tuné sur des données brutes (non transformées), et le deuxième modèle sur les données smilisées. 
 
 Les labels choisis pour ce fine-tunage sont : 
 - R11 (Code PMSI pour Nausée et Vomissement)
