@@ -43,11 +43,11 @@ les bioactivités des molécules à petite échelle) et **DrugBank** (base de do
 ### a. Création du dictionnaire
 Afin de créer le dictionniare j'ai mis en place 3 scripts : 
 
-- *create_chembl_dico* : créée le dictionnaire de ChemBL à partir de sa base de donnée *chemb_34_sqlite.tar.gz* récupérer [ici](https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/latest/). J'en ai récupérer les tables *'molecul_synonms.csv'* et *'compound_strucutre.csv'*. 
-- *create_durgbank_dico* : créée le dictionnaire de Drugbank à partir de sa base de donnée stockée dans *drugbank2024.xml* récupérer [ici](https://go.drugbank.com/releases/latest?_gl=1*yklr9l*_up*MQ..*_ga*MzQ1MzM2NDIzLjE3MjY0OTUyODE.*_ga_DDLJ7EEV9M*MTcyNjQ5NTI3OC4xLjAuMTcyNjQ5NTI3OC4wLjAuMA..#full).
-- *create_final_dico* : créée le dictionnaire final en fusionnant les deux dictionnaires précédents.
+- [*create_chembl_dico*](./create_chembl_dico.py) : créée le dictionnaire de ChemBL à partir de sa base de donnée *chemb_34_sqlite.tar.gz* récupérer [ici](https://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/latest/). J'en ai récupérer les tables *'molecul_synonms.csv'* et *'compound_strucutre.csv'*. 
+- [*create_durgbank_dico*](./create_drugbank_dico.py) : créée le dictionnaire de Drugbank à partir de sa base de donnée stockée dans *drugbank2024.xml* récupérer [ici](https://go.drugbank.com/releases/latest?_gl=1*yklr9l*_up*MQ..*_ga*MzQ1MzM2NDIzLjE3MjY0OTUyODE.*_ga_DDLJ7EEV9M*MTcyNjQ5NTI3OC4xLjAuMTcyNjQ5NTI3OC4wLjAuMA..#full).
+- [*create_final_dico*](./create_final_dico.py) : créée le dictionnaire final en fusionnant les deux dictionnaires précédents.
 
 ### b. Intégration des formules SMILES
-J'ai mis en place un script qui permet de **détecter les médicaments** dans un premier temps. Dans un second temps, le code **remplace ces médicaments** en leur formule SMILES au sein même du compte-rendu médical. Pour cela il faut exécuter *smiles_integration_app.py* qui lui va traiter un objet de type Dataset.
+J'ai mis en place un script qui permet de **détecter les médicaments** dans un premier temps. Dans un second temps, le code **remplace ces médicaments** en leur formule SMILES au sein même du compte-rendu médical. Pour cela il faut exécuter [*smiles_integration_app.py*](./smiles_integration_app.py) qui lui va traiter un objet de type [Dataset](https://huggingface.co/docs/datasets/index) en entrée.
 
 
